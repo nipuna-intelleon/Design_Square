@@ -1,0 +1,23 @@
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    /* border-radius: 50%; */ /* Uncomment if you want a circular cursor */
+    animation: colorChange 1s infinite alternate;
+    z-index: 10000; /* Ensure it's on top of other elements */
+    pointer-events: none; /* Prevent mouse events */
+    display: none; /* Initially hide the custom cursor */
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: #0B2C14;
+    }
+    50% {
+        background-color: #72A981;
+    }
+    100% {
+        background-color: #3d5442;
+    }
+}

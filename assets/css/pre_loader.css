@@ -1,0 +1,330 @@
+/* Preloader styles */
+#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000000;
+    background-color: #20362A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square {
+    width: 20px;
+    height: 20px;
+    background-color: #0ac490;
+    margin: 5px;
+    animation: squareAnim 1.5s infinite ease-in-out;
+}
+
+.square:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.square:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.square:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.square:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+@keyframes squareAnim {
+    0%, 40%, 100% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Hide the preloader after loading */
+body.loaded #preloader {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+
+
+
+.navbar {
+    background: linear-gradient(45deg, #4B6856, #20362A);
+    height: 60px;
+    margin-top: 20px;
+    margin-left: 90px;
+    margin-right: 90px;
+    padding: 0.5rem;
+    z-index: 1000000;
+}
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+.navbar-toggler:focus, .btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+.nav-link {
+    font-weight: 500;
+    position: relative;
+}
+.nav-link:hover, .nav-link.active {
+    color: #ffffff !important;
+}
+.nav-item {
+    display: inline;
+    margin-right: 40px;
+    font-family: Poppins, sans-serif;
+    font-size: 14px;
+    z-index: 1000000;
+}
+.nav-item a {
+    color: #ffffff;
+}
+.nav-item a:hover {
+    color: #009970;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: #0ac490 !important;
+}
+
+/* Media queries*/
+
+@media (max-width: 1024px) {
+    .nav-item {
+        font-size: 12px;
+    }
+    #logo {
+        transform: scale(0.8);
+    }
+
+}
+
+@media (min-width: 991px) {
+    .nav-link:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #009970;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+    .nav-link:hover::before, .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+@media (max-width: 992px) {
+    .offcanvas-body {
+        background-color: #20362A;
+    }
+    #logo {
+        transform: scale(0.75);
+        top: 10px;
+        left: 10px;
+    }
+    .navbar {
+        height: 54px;
+        margin: 0;
+    }
+    .navbar-toggler {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        color: #DDDDDD;
+    }
+}
+@media (max-width: 425px) {
+    #logo {
+        transform: scale(0.6);
+        top: 10px;
+        left: 10px;
+    }
+    .navbar-toggler {
+        transform: scale(0.8);
+        top: 10px;
+        right: 10px;
+    }
+}
+
+
+body {
+    overflow-x: hidden;
+}
+.bg-img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.hero-section .container {
+    position: absolute;
+    top: 30vh;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+}
+.hero-section .container p {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    margin: 10px 0;
+}
+.hero-section .container p:first-child {
+    font-size: 77px;
+    font-weight: 800;
+    color: white;
+}
+.hero-section .container p:nth-child(2) {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 47px;
+    letter-spacing: 0.05em;
+    margin-top: -38px;
+    color: #DDDDDD;
+    font-weight: 700;
+}
+.hero-section .container p:nth-child(3) {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: white;
+    margin-top: 4px;
+}
+.social-box {
+    position: absolute;
+    top: 55vh;
+    right: 0;
+    width: 42px;
+    height: 180px;
+    border-radius: 10px 0 0 10px;
+    background-color: rgba(57, 96, 68, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+.social-icon {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+.social-icon:hover{
+    transform: scale(1.4);
+}
+.social-icon .fa-facebook-f:hover{
+    color: #073795;
+}
+.social-icon .fa-twitter:hover{
+    color: #3D7FFF;
+}
+.social-icon .fa-instagram:hover{
+    color: #EB05FF;
+}
+
+/*Media queries*/
+
+@media (min-width: 1440px) {
+    .hero-section .container {
+        top: 36vh;
+    }
+}
+@media (max-width: 1024px) {
+    .hero-section .container {
+        top: 30vh;
+    }
+    .hero-section .container p:first-child {
+        font-size: 50px;
+    }
+    .hero-section .container p:nth-child(2) {
+        font-size: 30px;
+    }
+    .hero-section .container p:nth-child(3) {
+        font-size: 16px;
+    }
+    .social-box {
+        top: 32vh;
+        transform: scale(0.8);
+    }
+}
+@media (max-width: 768px) {
+    .hero-section .container p:first-child {
+        font-size: 40px;
+    }
+    .hero-section .container p:nth-child(2) {
+        font-size: 25px;
+        margin-top: -30px;
+    }
+    .hero-section .container p:nth-child(3) {
+        font-size: 14px;
+    }
+    .social-box {
+        top: 32vh;
+        transform: scale(0.8);
+    }
+    .hero-section .container {
+        top: 20vh;
+    }
+    #logo {
+        top: 1%;
+    }
+    .social-box {
+        top: 32vh;
+        transform: scale(0.7);
+        right: -6px;
+    }
+}
+@media (max-width: 552px) {
+    .social-box {
+        position: fixed;
+        display: inline; !important;
+        padding-right: 3vw;
+        top: 20px;
+        right: auto;
+        left: 100px;
+        transform: scale(0.71);
+        width: auto;
+        height: auto;
+        background-color: transparent;
+    }
+    .social-icon{
+        align-items: center;
+        margin-right: 10px;
+    }
+}
+@media (max-width: 425px) {
+    .social-box {
+        transform: scale(0.6);
+    }
+}
+@media (max-width: 490px) {
+    .bg-img {
+        visibility: hidden;
+    }
+    .hero-section .container, .hero-section {
+        background-color: #20362A;
+        z-index: 100;
+    }
+}
+
+
+
+
+
+
+
+

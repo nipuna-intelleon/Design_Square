@@ -1,0 +1,363 @@
+.about .methodalogy .m_heading{
+    position: relative;
+    top: -30vh;
+    left: 43%;
+    transform: scale(2.9);
+}
+
+.bg_methodology{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    content: "";
+    position: absolute;
+    top: -35vh;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -99999;
+
+}
+.methodalogy {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    position: relative;
+    top: 90vh;
+}
+
+.timeline {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    gap: 100px;
+}
+
+.step_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step {
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    background-color: #477855;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    color: #f0f0f0;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    border: 2px solid #ccc;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.step:hover {
+    background-color: #f0f0f0;
+    border-color: #477855;
+    color: black;
+}
+
+.active-step {
+    background-color: #f5f5f5;
+    border-color: #477855;
+    color: black;
+}
+
+.timeline-line {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 90%;
+    height: 3px;
+    background-color: #477855;
+}
+
+.vertical-line {
+    display: none;
+    width: 23px;
+    margin: 0;
+    padding: 0;
+    margin-left: 66px;
+    height: 21px;
+}
+
+.active-vertical {
+    display: block;
+}
+
+.methodology_description {
+    margin: 20px 160px 0;
+    min-height: 220px;
+    text-align: center;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.5;
+    border: 4px solid #477855; /* Add a border */
+    padding: 20px; /* Add some padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
+    width: border-box; /* Change this line */
+    /*margin: 20px auto; !* Center the description *!*/
+}
+
+
+
+.connector-square {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #477855;
+    top: 160px; /* Adjust this to control its distance from the top */
+
+    z-index: 1;
+    transition: left 0.3s ease; /* Smooth transition when moving the square */
+}
+
+.active-square {
+    background-color: #ccc;
+    border-color: #477855;
+}
+
+
+/* Media queries*/
+
+@media (max-width: 1024px) {
+    .methodology_description {
+        margin: -1px 22px -2px 34px;
+    }
+    .about .methodalogy  .m_heading{
+        left: 17%;
+        transform: scale(0.8);
+    }
+    .connector-square {
+        display: none;
+    }
+}
+
+@media (max-width: 980px) {
+    .step {
+        width: 8rem;
+        height: 8rem;
+        font-size: 1.25rem;
+    }
+
+    .vertical-line {
+        margin-left: 60px;
+    }
+
+    .methodology_description {
+        margin: -1px 20px 0px 20px;
+    }
+    .connector-square {
+        display: none;
+    }
+}
+
+@media (max-width: 910px) {
+    .step {
+        width: 6rem;
+        height: 6rem;
+        font-size: 1rem;
+    }
+
+    .vertical-line {
+        margin-left: 3.125rem;
+    }
+    .connector-square {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .about .methodalogy  .m_heading{
+        transform: scale(0.7);
+        left: 2%;
+    }
+    .connector-square {
+        display: none;
+    }
+}
+
+
+@media (max-width: 680px) {
+    .timeline {
+        gap: 25px;
+    }
+
+    .methodology_description {
+        min-height: 380px;
+    }
+    .connector-square {
+        display: none;
+    }
+
+}
+
+@media (max-width: 425px) {
+    link[href="https://unpkg.com/aos@next/dist/aos.css"] {
+        display: none !important;
+    }
+    .step {
+        width: 5rem;
+        height: 5rem;
+        font-size: .8rem;
+    }
+    .bg_methodology {
+        top: -51vh;
+    }
+
+    .vertical-line {
+        margin-left: 1.75rem;
+    }
+    .about .methodalogy  .m_heading {
+        transform: scale(1.5);
+        left: 13vw;
+        top: -73vh;
+    }
+    .methodology_description {
+        margin: 0px -17px 0px -17px;
+        position: relative;
+        top: -52vh;
+    }
+    .timeline {
+        gap: 19px;
+        top: -52vh;
+    }
+    .connector-square {
+        display: none;
+    }
+}
+
+@media (max-width: 380px) {
+    link[href="https://unpkg.com/aos@next/dist/aos.css"] {
+        display: none !important;
+    }
+    .step {
+        width: 4rem;
+        height: 4rem;
+        font-size: .7rem;
+    }
+
+    .vertical-line {
+        margin-left: 2.125rem;
+    }
+    .about .methodalogy  .m_heading {
+        transform: scale(0.5);
+        left: -63%;
+    }
+    .vertical-line {
+        margin-left: 1.125rem;
+    }
+    .methodology_description {
+        margin: -2px -19px 0px -18px;
+    }
+    .connector-square {
+        display: none;
+    }
+}
+
+@media (max-width: 340px) {
+    .step {
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: .5rem;
+    }
+
+    .vertical-line {
+        margin-left: 1.75rem;
+    }
+
+    .timeline-line{
+        width: 98%;
+        left: 0;
+    }
+    .connector-square {
+        display: none;
+    }
+}
+@media (max-width: 980px) {
+    .step {
+        width: 8rem;
+        height: 8rem;
+        font-size: 1.25rem;
+    }
+
+    .methodology_description {
+        margin: 30px 20px;
+    }
+}
+
+@media (max-width: 910px) {
+    .step {
+        width: 6rem;
+        height: 6rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 680px) {
+    .timeline {
+        gap: 12px;
+    }
+    .methodology_description {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 440px) {
+    .step {
+        width: 5rem;
+        height: 5rem;
+        font-size: 0.8rem;
+    }
+    .methodology_description {
+        font-size: 16px;
+    }
+    .bg_methodology {
+        display: none;
+    }
+    .methodalogy {
+
+        top:110vh;
+    }
+}
+
+@media (max-width: 380px) {
+    .step {
+        width: 4rem;
+        height: 4rem;
+        font-size: 0.7rem;
+    }
+    .methodology_description {
+        font-size: 16px;
+    }
+    .bg_methodology {
+        display: none;
+    }
+}
+
+@media (max-width: 340px) {
+    .step {
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 0.5rem;
+    }
+
+    .timeline-line {
+        width: 98%;
+        left: 0;
+    }
+    .methodology_description {
+        font-size: 16px;
+    }
+    .bg_methodology {
+        display: none;
+    }
+}

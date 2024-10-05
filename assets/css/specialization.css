@@ -1,0 +1,269 @@
+.specializations {
+    width: 100%;
+    padding: 2rem;
+    padding-bottom: 5rem;
+    position: relative;
+    top: 165vh;
+}
+
+.specializations_content {
+    margin: 0 auto;
+    max-width: 1000px;
+
+}
+.specialization_heading{
+    position: absolute;
+    left: 25vw;
+    top: -40vh;
+    transform: scale(1.05);
+}
+
+.specializations_grid {
+    position: relative;
+    margin: 0 auto;
+    padding: 1em;
+    max-width: 100%;
+    list-style: none;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    /* width: 100%; */
+    justify-content: center;
+    align-items: start;
+    gap: 30px;
+}
+
+.specializations_grid figure {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 10px 1%;
+    max-height: 360px;
+    background: #529c71;
+    text-align: center;
+    /*cursor: pointer;*/
+    width: 50%;
+    height: 100%;
+    width: auto;
+}
+
+.specializations_grid figure img {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+}
+
+.specializations_grid figure figcaption {
+    padding: 1.1em;
+    color: #fff;
+    font-family: 'Darker Grotesque', sans-serif;
+
+    font-size: 1.50em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.specializations_grid figure figcaption::before,
+.specializations_grid figure figcaption::after {
+    pointer-events: none;
+}
+
+.specializations_grid figure figcaption,
+.specializations_grid figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.specializations_grid figure figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+}
+
+.specializations_grid figure h2 {
+    word-spacing: -0.15em;
+    font-weight: 800;
+}
+
+.specializations_grid figure h2 span {
+    font-weight: 800;
+}
+
+.specializations_grid figure h2,
+.specializations_grid figure p {
+    margin: 0;
+}
+
+.specializations_grid figure p {
+    letter-spacing: 0;
+    font-size: 65.5%;
+}
+
+
+/***** effect *****/
+
+figure.specializations_effect {
+    background: #000000;
+}
+
+figure.specializations_effect img {
+    opacity: 0.8;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+
+figure.specializations_effect:hover img {
+    opacity: 0.4;
+}
+
+figure.specializations_effect figcaption::before,
+figure.specializations_effect figcaption::after {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.specializations_effect figcaption::before {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: scale(0,1);
+    transform: scale(0,1);
+}
+
+figure.specializations_effect figcaption::after {
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    -webkit-transform: scale(1,0);
+    transform: scale(1,0);
+}
+
+figure.specializations_effect h2 {
+    padding-top: 5%;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,-20px,0);
+    transform: translate3d(0,-20px,0);
+}
+
+figure.specializations_effect p {
+    padding: 6px 0.5em;
+    letter-spacing: 1px;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0,20px,0);
+    transform: translate3d(0,20px,0);
+}
+
+figure.specializations_effect:hover figcaption::before,
+figure.specializations_effect:hover figcaption::after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+figure.specializations_effect:hover h2,
+figure.specializations_effect:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+/* Media queries*/
+
+
+@media screen and (max-width: 320px) {
+    figure.specializations_effect figcaption::before,
+    figure.specializations_effect figcaption::after {
+        top: 15px;
+        right: 15px;
+        bottom: 15px;
+        left: 15px;
+    }
+
+
+
+    figure.specializations_effect p {
+        padding: 8px 0.8rem;
+    }
+
+    .specializations_grid figure figcaption {
+        padding: 1em;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .specializations_grid {
+        grid-template-columns: auto;
+    }
+    .specialization_heading {
+        left: 14vw;
+        transform: scale(0.8);
+    }
+}
+@media screen and (max-width: 768px) {
+    .specialization_heading {
+        left: 2vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .specializations {
+        top: 150vh;
+    }
+    .specializations_grid figure{
+        height: 360px;
+    }
+    .specialization_heading {
+        left: -37vw;
+        top: -85vh;
+        transform: scale(0.52);
+    }
+    .specializations_grid {
+        top: -59vh;
+        padding: 0em;
+        gap: 62px;
+    }
+    .specializations_grid figure figcaption {
+        padding: 1em;
+    }
+    .specializations_grid figure p {
+        font-size: 58.5%;
+    }
+
+}
+@media screen and (max-width: 375px) {
+    .specialization_heading {
+        left: -48vw;
+
+        transform: scale(0.49);
+    }
+    .specializations_grid figure figcaption, .specializations_grid figure figcaption > a {
+        position: absolute;
+        top: -10px;
+        left: -14px;
+        width: 110%;
+        height: 107%;
+    }
+}
+
+@media (max-width: 425px), (max-width: 375px) {
+
+    link[href="https://unpkg.com/aos@next/dist/aos.css"] {
+        display: none !important;
+    }
+}

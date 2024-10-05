@@ -1,0 +1,108 @@
+#projects {
+    position: relative;
+    top: 220vh;
+}
+.prj_heading {
+    position: relative;
+    left: 42vw;
+    top: 11vh;
+    transform: scale(1.7);
+}
+.gallery-container {
+    padding: 50px;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 39px;
+    position: relative;
+    top: 35vh;
+}
+.gallery img {
+    width: calc(33.33% - 20px);
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+.gallery img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+.gallery img:hover ~ img,
+.gallery:hover img:not(:hover) {
+    opacity: 0.5;
+}
+.gallery .row-last {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Media queries */
+
+@media (max-width: 1024px) {
+    #projects {
+        position: relative;
+        top: 194vh;
+    }
+    .prj_heading {
+        position: relative;
+        left: 3%;
+        top: 17vh;
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery img, .gallery .row-last img {
+        width: calc(50% - 20px);
+    }
+    .prj_heading {
+        position: relative;
+        left: -13%;
+        top: 17vh;
+        transform: scale(0.6);
+    }
+    .gallery .row-last {
+        flex-direction: column; /* Show images in one column */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery img, .gallery .row-last img {
+        width: calc(100% - 20px);
+    }
+    #projects {
+        position: relative;
+        top: 126vh;
+    }
+    .prj_heading {
+        top: 23vh;
+        left: 20vw;
+        transform: scale(1.0);
+    }
+    .gallery .row-last img {
+        width: calc(100% - 0px); /* Full width for smaller screens */
+    }
+    .gallery .row-last {
+        flex-direction: column; /* Keep column layout for smaller screens */
+    }
+}
+
+@media (max-width: 375px) {
+    .prj_heading {
+        left: -81%;
+        transform: scale(0.37);
+    }
+}
+
+@media (max-width: 425px), (max-width: 375px) {
+    link[href="https://unpkg.com/aos@next/dist/aos.css"] {
+        display: none !important;
+    }
+}

@@ -1,0 +1,51 @@
+.custom-card {
+    border: none; /* No frame around the cards */
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+.custom-card-right {
+    margin-left: 10vw; /* Move the first card 2px to the right */
+
+}
+
+.custom-card-left {
+    margin-right: 2px; /* Move the second card 2px to the left */
+
+}
+
+.custom-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-align-start {
+    align-items: start;
+    margin-left: 10vw;
+}
+
+.custom-align-end {
+    align-items: end;
+    margin-right: 10vw;
+}
+
+.custom-mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.custom-text-end {
+    text-align: end;
+}
+
+@media (max-width: 767px) {
+    .custom-flex {
+        align-items: center !important;
+    }
+
+    .custom-text-end, .custom-text-start {
+        text-align: center !important;
+    }
+    .custom-align-end, .custom-align-start {
+        margin: 0;
+    }
+}
