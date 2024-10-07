@@ -201,6 +201,28 @@ footer {
         transform: scale(0.9);
     }
 }
+@media (max-width: 820px) {
+    #contact {
+        position: relative;
+        top: 138vh;
+    }
+    .contact_heading {
+        position: relative;
+        left: -1%;
+        top: 6vh;
+        transform: scale(1.2);
+    }
+}
+
+@media (max-width: 768px) {
+    #contact {
+        top: 157vh;
+    }
+    .contact_heading {
+        top: 5vh;
+        transform: scale(1.3);
+    }
+}
 @media (max-width: 425px) {
     #contact {
         position: relative;
