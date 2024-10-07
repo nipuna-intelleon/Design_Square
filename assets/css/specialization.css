@@ -215,9 +215,29 @@ figure.specializations_effect:hover p {
         transform: scale(0.8);
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 820px) {
+    .specializations {
+        top: 69vh;
+    }
     .specialization_heading {
-        left: 2vw;
+        left: 8vw;
+        top: -20vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .specializations {
+        top: 101vh;
+    }
+    .specialization_heading {
+        left: 5vw;
+        top: -38vh;
+    }
+    .specializations_grid {
+        top: -20vh;
+    }
+    .choose_container {
+        top: 31vh;
     }
 }
 
