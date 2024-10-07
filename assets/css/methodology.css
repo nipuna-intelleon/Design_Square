@@ -175,13 +175,50 @@
         display: none;
     }
 }
+@media (max-width: 820px) {
+    .methodalogy {
+        top: 57vh;
+    }
+    .about .methodalogy .m_heading {
+        left: 36%;
+        transform: scale(2);
+    }
+    .timeline {
+        top: -18vh;
+    }
+    .methodology_description {
+        position: relative;
+        top: -16vh;
+    }
+    .bg_methodology {
+        transform: scale(0.85);
+        left: -30vw;
+        top: -40vh;
+    }
+}
 @media (max-width: 768px) {
     .about .methodalogy  .m_heading{
-        transform: scale(0.7);
-        left: 2%;
+        transform: scale(2.2);
+        left: 34%;
+        top: -23vh;
     }
     .connector-square {
         display: none;
+    }
+    .bg_methodology{
+        left: -74vw;
+        top: -36vh;
+        transform: scale(0.85);
+    }
+    .methodalogy {
+        top: 67vh;
+    }
+    .timeline {
+        top: -11vh;
+    }
+    .methodology_description {
+        position: relative;
+        top: -9vh;
     }
 }
 
