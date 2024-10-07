@@ -206,19 +206,31 @@
         right: 0;
     }
 }
+@media (max-width: 820px) {
 
+    .about-heading {
+        top: 7vh;
+    }
+    .slider {
+        top: 10vh;
+    }
+
+}
 @media (max-width: 768px) {
     .about-heading {
         transform: scale(0.7);
+        top: 11vh;
     }
+
     .slider {
         height: 500px;
         transform: scale(0.6);
-
+        top: 18vh;
     }
     .about_content_container {
         padding: 1rem;
         margin-top: 2rem;
+        top: 144px;
     }
     .about_title_1 {
         font-size: 28px;
