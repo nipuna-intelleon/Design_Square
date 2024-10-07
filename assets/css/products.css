@@ -345,9 +345,31 @@
     }
 
 }
-@media (max-width: 768px) {
+@media (max-width: 820px) {
+    #products {
+        position: relative;
+        top: 86vh;
+    }
     .product_heading {
-        left: 21%;
+        transform: scale(0.99);
+        top: 14vh;
+        left: 29vw;
+    }
+    .topic_p {
+        left: 5vw;
+    }
+}
+@media (max-width: 768px) {
+    #products {
+        top: 106vh;
+    }
+    .product_heading {
+        left: 29%;
+        transform: scale(1.25);
+        top: 10vh;
+    }
+    .product_card_row {
+        left: 0;
     }
 }
 
