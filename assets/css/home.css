@@ -111,6 +111,18 @@ body {
         transform: scale(0.8);
     }
 }
+@media (max-width: 820px) {
+    .hero-section #container {
+        top: 10vh;
+    }
+    .hero-section .container .fade-up:nth-child(2) {
+        font-size: 20px;
+        position: relative;
+        top: 1vh;
+    }
+
+}
+
 @media (max-width: 768px) {
     .hero-section .container .fade-up:first-child {
         font-size: 40px;
@@ -128,7 +140,7 @@ body {
         right: -6px;
     }
     .hero-section #container {
-        top: 20vh;
+        top: 9vh;
     }
     #logo {
         top: 1%;
