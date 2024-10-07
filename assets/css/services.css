@@ -176,8 +176,21 @@
         transform: scale(0.8);
     }
 }
+@media (max-width: 820px) {
+    #services {
+        position: relative;
+        top: 58vh;
+    }
+    .services_heading {
+        top: 21vh;
+        transform: scale(0.99);
+    }
+}
 
 @media (max-width: 768px) {
+    #services {
+        top: 74vh;
+    }
     .card-03 {
         flex-direction: column;
     }
@@ -191,9 +204,9 @@
         height: auto;
     }
     .services_heading {
-        top: 17vh;
-        left: 17%;
-        transform: scale(0.7);
+        top: 19vh;
+        left: 25%;
+        transform: scale(1.2);
     }
     .card-02 {
         flex-direction: column;
