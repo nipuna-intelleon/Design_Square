@@ -6,7 +6,6 @@
 body {
     padding: 0;
     margin: 0;
-    cursor: none;
     overflow-x: hidden;
 }
 .hero-section #container {
@@ -86,13 +85,6 @@ body {
     color: #000;
 }
 
-/*Media queries*/
-
-/*@media (min-width: 1440px) {*/
-/*    .hero-section .container {*/
-/*        top: 36vh;*/
-/*    }*/
-/*}*/
 @media (max-width: 1024px) {
     .hero-section #container {
         top: 30vh;
