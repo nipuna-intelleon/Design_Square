@@ -19,8 +19,7 @@
     <link rel="stylesheet" href="assets/css/vission_mission.css">
     <link rel="stylesheet" href="assets/css/pre_loader.css">
     <link rel="stylesheet" href="assets/css/animations.css">
-    <link rel="stylesheet" href="assets/css/mouse_click.css">
-    <link rel="stylesheet" href="assets/css/mouse_cursor.css">
+
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 <!--external libraries-->
@@ -37,19 +36,6 @@
 
 </head>
 <body>
-
-<!--pre loader-->
-<!--<div id="preloader">-->
-<!--    <div class="square"></div>-->
-<!--    <div class="square"></div>-->
-<!--    <div class="square"></div>-->
-<!--    <div class="square"></div>-->
-<!--    <div class="square"></div>-->
-<!--</div>-->
-
-
-<!--customize cursor-->
-<div class="cursor"></div>
 
 <!--navigation bar-->
 <nav class="navbar navbar-expand-lg fixed-top" >
@@ -311,7 +297,7 @@
                         <img src="assets/img/Corporate_1.jpg" alt="img02"/>
                         <figcaption>
                             <h2>Corporate</h2>
-                            <p>We are specialized in understanding the ergonomics, standards and the true essence of the client's business atmosphere to create the most appealing and comfortable corporate spaces. From small- to medium- to large- corporate spaces, our designs and offerings are well and truly adapted by our blue-chip clients.</p>
+                            <p style="text-align: justify">We are specialized in understanding the ergonomics, standards and the true essence of the client's business atmosphere to create the most appealing and comfortable corporate spaces. From small- to medium- to large- corporate spaces, our designs and offerings are well and truly adapted by our blue-chip clients.</p>
                         </figcaption>
                     </figure>
 
@@ -327,7 +313,7 @@
                         <img src="assets/img/Hospitality_1.jpg" alt="img02"/>
                         <figcaption>
                             <h2>Hospitality</h2>
-                            <p>Sri Lanka is evidently one of the most travelled destinations in the world. Most parts of the island are vibrant and almost all of them carry different landscapes, cultures and experiences. Henceforth, almost all parts of the island cater to travelers and adventurers around the world. With star grade hotels, resorts and spas in our portfolio, we are passionate about blending different natures and environments in to our concepts and designs</p>
+                            <p style="text-align: justify">Sri Lanka is evidently one of the most travelled destinations in the world. Most parts of the island are vibrant and almost all of them carry different landscapes, cultures and experiences. Henceforth, almost all parts of the island cater to travelers and adventurers around the world. With star grade hotels, resorts and spas in our portfolio, we are passionate about blending different natures and environments in to our concepts and designs</p>
                         </figcaption>
                     </figure>
 
@@ -349,7 +335,6 @@
 
 <!--services-->
 
-<!--<section id="services" class="services" data-aos="fade-up" data-aos-duration="1000">-->
 <section id="services" class="services">
     <img class="services_heading" src="assets/img/services_heading.png" alt="SERVICES" height="60px">
     <div class="card-02">
@@ -679,35 +664,11 @@
     });
 </script>
 
-
-
-<!--&lt;!&ndash;mouse click&ndash;&gt;-->
-<!--<script>-->
-<!--    document.onclick = function (e){-->
-<!--        let x = e.pageX;-->
-<!--        let y = e.pageY;-->
-
-<!--        let span = document.createElement("span");-->
-<!--        span.classList.add("click_effect");-->
-<!--        span.style.top = y + "px";-->
-<!--        span.style.left = x + "px";-->
-<!--        document.body.appendChild(span);-->
-
-<!--        setTimeout(() => {-->
-<!--            span.remove();-->
-<!--        },800);-->
-<!--    }-->
-<!--</script>-->
-
-
-
 <!--animation-->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     AOS.init();
 </script>
-
-
 
 
 <!--pre loader-->
@@ -724,30 +685,6 @@
         }, 1500); // 5000 milliseconds = 5 seconds
     });
 </script>
-
-
-
-
-<!--customize cursor-->
-<script>
-    var cursor = document.querySelector(".cursor");
-    var pointerAreas = document.querySelectorAll('.pointer-area');
-
-    document.addEventListener("mousemove", function (event) {
-        // Update cursor position
-        cursor.style.left = event.clientX + "px";
-        cursor.style.top = event.clientY + "px";
-
-        // Check if the mouse is over a pointer area
-        var isPointerArea = Array.from(pointerAreas).some(area =>
-            area.contains(event.target)
-        );
-
-        // Show or hide the custom cursor based on the mouse position
-        cursor.style.display = isPointerArea ? "none" : "block";
-    });
-</script>
-
 
 <script src="assets/js/methodology.js"></script>
 <script src="assets/js/products.js"></script>
