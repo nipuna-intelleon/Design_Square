@@ -82,11 +82,7 @@
         left: 35vw;
         top: 23vh;
     }
-    /*.gallery .row-last {*/
-    /*    flex-direction: column;*/
-    /*    position: relative;*/
-    /*    left: 20.5vw;*/
-    /*}*/
+
 }
 
 @media (max-width: 480px) {
